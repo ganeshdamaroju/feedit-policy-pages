@@ -11,7 +11,7 @@
       <section class="hero">
         <h1>Privacy Policy</h1>
         <p class="muted">Feedit</p>
-        <p>Effective date: October 18, 2026</p>
+        <p>Effective date: October 19, 2026</p>
         <nav>
           <a href="index.html">Home</a>
           <a href="account-deletion.html">Account Deletion</a>
@@ -26,10 +26,13 @@
         <ul>
           <li>Account login information, such as email address, through Supabase Authentication.</li>
           <li>If the user chooses Google sign-in, Google may provide basic profile details such as name and email address for login.</li>
-          <li>Profile information entered by the user, such as first name, last name, email address, and mobile number.</li>
+          <li>Profile information entered by the user, such as first name, last name, and email address.</li>
           <li>Personal finance records entered by the user, including card details, bank account names, cash records, income, expenses, transfers, EMI details, fixed expenses, and transaction history.</li>
           <li>App preference information, such as currency, font size, dark mode, and app lock settings.</li>
           <li>Feedback entered by the user inside the app.</li>
+          <li>Optional saved tool records, such as names and birthdays, subscription and shopping records, trips, events and meetings, warranties, appliance services, gas bookings, medicine names, doses and schedules, and notes entered with those records.</li>
+          <li>Persisted tool preferences and Gold &amp; Silver Calculator inputs, such as weights, rates and charges. BMI and nutrition calculator inputs are processed on the device and held only in the app session, not included in account cloud snapshots.</li>
+          <li>Premium purchase and entitlement information used to verify access, including product identifiers, purchase tokens and transaction details supplied by Google Play.</li>
         </ul>
 
         <h2>How Information Is Used</h2>
@@ -37,37 +40,57 @@
           <li>Create and manage the user's app account.</li>
           <li>Show the user's own financial records inside the app.</li>
           <li>Help users export records or create backup files.</li>
+          <li>Automatically synchronize supported records and preferences with the user's signed-in account, restore them on another device, and retry pending backups after connectivity returns.</li>
           <li>Save profile and app preference details.</li>
           <li>Improve the app experience based on feedback.</li>
         </ul>
 
+        <h2>Optional Compass Features</h2>
+        <p>Compass uses your phone's magnetic and motion sensors while the feature is open. It does not request or use location access. Sensor readings are not uploaded, saved in history, or included in backups. There is no background location tracking.</p>
+
+        <h2>Bill Splitter Groups</h2>
+        <p>Bill Splitter stores group names, member names, expenses, split amounts, notes and settlement records under your signed-in Feedit account. These records work offline and are included in your account's existing financial cloud sync and JSON backups. They are not encrypted as a password vault. Adding a person does not invite them or grant access to your account. Sharing a balance summary is optional and uses your device's share menu. Deletion markers may be retained to prevent deleted records from reappearing during synchronization.</p>
+        <h2>Optional Trip, Events and Level Tools</h2>
+        <p>Saved trips, personal events, reminder settings and Level Tool preferences use account-scoped device storage. Supported saved tool records, calculator inputs and preferences are also included in automatic account cloud sync as described below. These records are not encrypted as a password vault. Your device's operating-system backup settings may also apply. Removing app data or uninstalling can remove local records, but does not by itself delete the cloud copy.</p>
+        <p>Events &amp; Reminders, Subscription Tracker, Medication Schedule, Warranty Tracker, and Appliance Service Tracker can schedule local notifications on your device when you enable them. Feedit requests notification permission only after you turn on a reminder. Reminder titles, dates, medicine names, and dose text may appear in notifications; notes are not included. Notifications are scheduled by the device, including while Feedit is closed. Feedit does not create push tokens, upload reminder content to a notification server, read your device address book or system calendar, or request automatically granted exact-alarm access. Names and event details you enter manually can still be part of account cloud sync. If you select Alarm on Android, Feedit asks you to grant Alarms &amp; reminders access for precise timing. Ringing alarms use a foreground service with a named notification, Stop and Snooze controls, and a five-minute ringing limit. Upcoming alarms are stored on the device and restored after reboot or an app update. Delivery and sound depend on device permissions, channel settings, alarm volume and system restrictions. A powered-off or force-stopped phone/app cannot deliver alarms normally; reopen Feedit to refresh schedules. Normal notifications may be delayed when precise alarm access is unavailable. Removing app data or uninstalling removes scheduled notifications. Trip calculations do not require maps or location. Level Tool reads motion sensors while measuring; readings and calibration are not saved or uploaded. Optional sound does not record audio or use the microphone.</p>
+
+        <h2>Optional Mini Games</h2>
+        <p>Mini Games run on your device without an online gaming account. Optional player names, game results, and scores are kept only for the current game session and are not uploaded or included in financial backups. Sound, haptic, and animation preferences are saved locally for your signed-in account. Games do not record audio or use the microphone, and do not offer betting, prizes, or purchasable chances.</p>
+
         <h2>Storage and Security</h2>
-        <p>Most financial tracking records are stored locally on the user's device under the signed-in user's app storage. Profile information may be stored in Supabase so the user's profile can be linked to their login account.</p>
-        <p>The app uses Supabase Authentication for email login and optional Google sign-in. Users should keep their login credentials safe. If the user enables app lock, the lock helps protect app access on the device.</p>
+        <h3>Optional Password Manager</h3>
+        <p>Password Manager stores an encrypted vault on your device, separately for each signed-in Feedit account. Passwords, usernames, email addresses, phone numbers, notes, categories, and other vault fields are encrypted using AES-256-GCM before local storage. The master password is not saved. If enabled, biometric unlocking uses the operating system's protected credential storage; Feedit does not receive fingerprint or face data.</p>
+        <p>Vault contents and password health checks are not sent to Supabase or other servers and are not included in Feedit financial backups or exports. You can explicitly export an encrypted vault file and restore it using the same Feedit account and its backup master password. Your device's own backup settings may include encrypted app data; biometric keys are excluded from Android backup. Keep a separate encrypted backup: uninstalling the app or losing the device can remove local vault data, and Feedit cannot reset a forgotten master password.</p>
+        <p>Copying an entry places its value on the system clipboard. Automatic clearing is best effort and cannot prevent other apps from reading it beforehand. Screen capture protection is used where supported, but no app can guarantee protection on a compromised device. Opening a saved website shares the requested address with your chosen browser; the vault does not fetch remote service icons or send passwords to strength-checking services.</p>
+        <h3>Account Cloud Sync and Backups</h3>
+        <p>Feedit stores working copies of records on your device and automatically sends supported account data to Supabase over HTTPS while you are signed in and connectivity is available. Cloud sync is not limited to profile information. Snapshots can include financial accounts, balances, transactions, income, expenses, loans and EMI records, Bill Splitter records, profile and account identifiers, feedback drafts, preferences, saved tool records and persisted calculator inputs.</p>
+        <p>Saved tool collections include birthdays, subscriptions, medication schedules, warranties, appliance services, events, shopping, gas bookings, trips and meetings. Information you enter in these tools, including medicine names, doses, dates, names and notes, can therefore leave the device as part of account backup. Persisted Gold &amp; Silver Calculator inputs and supported preferences are also included. BMI and nutrition calculator form values are session-only and are not part of these cloud snapshots. You can avoid entering optional information you do not want included.</p>
+        <p>Cloud sync runs automatically after supported data changes and during app lifecycle transitions. Failed uploads may be queued and retried. The Auto backup frequency setting controls the separate local automatic backup feature; setting it to Off does not turn off account cloud sync. Signing out or uninstalling does not delete existing cloud records.</p>
+        <p>Cloud records and ordinary JSON backup files are not end-to-end encrypted or protected by the Password Manager master password. HTTPS protects supported service connections in transit, but device app lock is not encryption for financial or tool records. Keep your login credentials and any downloaded backup files private. Password Manager vault contents remain separate and are excluded from these financial/tool snapshots as described above.</p>
+        <p>Google Play handles Premium payments. Feedit sends purchase information to its Supabase verification service, which checks the purchase with Google Play and stores account-linked entitlement and verification information. Feedit does not receive your full payment card details from Google Play.</p>
+        <h3>Retention and Deletion</h3>
+        <p>Account-linked cloud records are retained to provide synchronization and restoration until changed or deleted through supported features or an account/data deletion request is processed. Synchronization can retain deletion markers and device recovery copies to prevent old records from reappearing. Signing out, removing local records alone, or uninstalling should not be treated as a request to delete the entire account or all cloud copies.</p>
+        <p>For deletion of your account and associated cloud records, use Settings &gt; Privacy &gt; Request account deletion, the public account deletion page below, or contact us at infotechvvd@gmail.com. This starts a request for review; it is not an instant automatic deletion. Files you exported or shared, copies on other devices, and cloud-provider historical backups, if configured, require separate handling and are subject to their applicable retention settings.</p>
 
         <h2>Sharing and Export</h2>
-        <p>The app allows users to export records and create backup files. Exported spreadsheet files and backup JSON files are created only when the user chooses to export or back up data. Users are responsible for where they save or share these files.</p>
+        <p>Exported spreadsheets, PDFs and shared JSON backup files are created when you choose an export or backup action. Premium users can also enable a separate automatic local backup copy. These file-based features are separate from the automatic account cloud sync described above. Ordinary financial/tool JSON files are not encrypted. Users are responsible for where they save or share exported files and for deleting old copies they no longer need.</p>
 
         <h2>Third-Party Services</h2>
         <ul>
-          <li>Supabase for email authentication, optional Google sign-in, and profile storage.</li>
+          <li>Supabase for email authentication, optional Google sign-in, account-linked financial and tool cloud storage, profile storage, and Premium entitlement verification.</li>
           <li>Google for optional Google account sign-in. The app requests only basic sign-in information and does not request Gmail, Drive, contacts, or payment access.</li>
           <li>Expo/React Native platform features for app operation, file sharing, document picking, and local storage.</li>
+          <li>Google Play for Premium payments and purchase verification.</li>
           <li>Google AdMob for advertising and Google User Messaging Platform (UMP) for managing advertising consent and privacy choices.</li>
         </ul>
 
-        
         <h2>Advertising and Privacy Choices</h2>
+        <p>When advertising is enabled, Feedit uses Google AdMob to display banner advertisements. Active Premium users are not shown ads.</p>
+        <p>Google's Mobile Ads SDK collects and shares IP addresses, device and account identifiers (including advertising IDs where available), app and ad interactions, and diagnostic information for advertising, analytics, and fraud prevention. IP addresses may be used to estimate a device's general location.</p>
+        <p>Feedit does not pass your financial records, balances, transaction descriptions, or Feedit login email to AdMob.</p>
+        <p>Where required, Feedit uses Google's User Messaging Platform to present privacy and consent choices before requesting ads. Where available, you can review or change these choices through Settings &gt; Ad privacy choices. Declining personalized advertising does not necessarily remove all advertising.</p>
+        <p>For information about Google's data practices, see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a>.</p>
 
-<p>When advertising is enabled, Feedit uses Google AdMob to display banner advertisements. Active Premium users are not shown ads.</p>
-
-<p>Google's Mobile Ads SDK collects and shares IP addresses, device and account identifiers (including advertising IDs where available), app and ad interactions, and diagnostic information for advertising, analytics, and fraud prevention. IP addresses may be used to estimate a device's general location.</p>
-
-<p>Feedit does not pass your financial records, balances, transaction descriptions, or Feedit login email to AdMob.</p>
-
-<p>Where required, Feedit uses Google's User Messaging Platform to present privacy and consent choices before requesting ads. Where available, you can review or change these choices through Settings &gt; Ad privacy choices. Declining personalized advertising does not necessarily remove all advertising.</p>
-
-<p>For information about Google's data practices, see the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a>.</p>
         <h2>Data Deletion</h2>
         <p>Users can delete local records inside the app where delete options are provided. Users may also sign out of the app.</p>
         <p>For account/profile deletion requests, users can go to Settings &gt; Privacy &gt; Request account deletion inside the app. Users can also request deletion through the public account deletion page linked from the Play Store listing.</p>
@@ -84,3 +107,4 @@
     </main>
   </body>
 </html>
+
